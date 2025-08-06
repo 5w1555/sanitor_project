@@ -1,0 +1,15 @@
+__pycache__/
+sanitor.egg-info/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.bak
+*.tmp
+.env/
+venv/
+env/
+site-packages/
+.DS_Store
+.idea/
+.vscode/
