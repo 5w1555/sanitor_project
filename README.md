@@ -112,12 +112,12 @@ It’ll be picked up automatically.
 
 ## TODO
 
-CI/CD workflow implementation
-More built-in checks
-demo?
-Easier to tune checks depending on your need
-Optimizing checks (tested only on low scale, 5000+ lines python codebases)
-Multi-language implementation
+* CI/CD workflow implementation
+* More built-in checks
+* demo?
+* Easier to tune checks depending on your need
+* Optimizing checks (tested only on low scale, 5000+ lines python codebases)
+* Multi-language implementation
 
 
 ## Why This Exists
