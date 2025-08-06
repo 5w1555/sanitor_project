@@ -47,6 +47,12 @@ pip install .
 python sanitor_cli.py path/to/codebase
 ```
 
+or, if you installed it as cli locally:
+
+```bash
+sanitor path/to/codebase
+```
+
 Or specify thresholds/config manually:
 
 ```bash
@@ -104,12 +110,25 @@ It’ll be picked up automatically.
 
 ---
 
+## TODO
+
+CI/CD workflow implementation
+More built-in checks
+demo?
+Easier to tune checks depending on your need
+Optimizing checks (tested only on low scale, 5000+ lines python codebases)
+Multi-language implementation
+
 
 ## Why This Exists
 
-Sanitor was built to catch subtle code smells and structural issues that linters miss, as I had issues in my own code.
+Sanitor was built as I had many fundamental design issues in my own code. I needed a tool to tell me just that and fast.
+
+It's as of now still a work in progress.
 
 ---
+
+
 
 ## License
 
