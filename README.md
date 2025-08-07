@@ -3,7 +3,7 @@
 
 Sanitor is a static analyzer for Python codebases. Not a linter, not a style cop — just a tool that stares at your AST and says: "Why is this like that?"
 
-It catches code smells that even senior devs miss until it's too late.
+It focuses on using AST, giving you a report in seconds of the most pressing strctural issues in your codebase.
 
 ---
 
@@ -11,10 +11,10 @@ It catches code smells that even senior devs miss until it's too late.
 
 * **Vague Naming** – `handle()`, `process_data()`, `get_info()` — all flagged if they're everywhere.
 * **Cyclomatic Complexity** – Too many branches? It tells you. Default: >20.
-* **Deep Nesting** – Once your function hits 4+ indentation levels, expect a ping.
+* **Deep Nesting** – Once your function hits 3/4+ indentation levels.
 * **Import Cycles** – Tarjan’s algorithm finds circular imports no matter how deep.
-* **Magic Numbers** – `42`, `100`, `7` repeated? Flagged unless justified.
-* **Similar Functions** – Heuristics catch near-duplicate functions that have essentially the same function.
+* **Magic Numbers** – `42`, `100`, `7` repeated 3/4+ times.
+* **Similar Functions** – Heuristics catch near-duplicate functions that have essentially the same "format" and could be used as a form.
 
 ---
 
@@ -45,6 +45,12 @@ pip install .
 
 ```bash
 python sanitor_cli.py path/to/codebase
+```
+
+or, if you installed it as cli locally:
+
+```bash
+sanitor path/to/codebase
 ```
 
 Or specify thresholds/config manually:
@@ -104,12 +110,25 @@ It’ll be picked up automatically.
 
 ---
 
+## TODO
+
+* CI/CD workflow implementation
+* More built-in checks
+* demo?
+* Easier to tune checks depending on your need
+* Optimizing checks (tested only on low scale, 5000+ lines python codebases)
+* Multi-language implementation
+
 
 ## Why This Exists
 
-Sanitor was built to catch subtle code smells and structural issues that linters and style checkers miss, saving time and improving code quality.
+Sanitor was built as I had many fundamental design issues in my own code. I needed a tool to tell me just that and fast.
+
+It's as of now still a work in progress.
 
 ---
+
+
 
 ## License
 
