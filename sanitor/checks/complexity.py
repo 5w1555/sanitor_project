@@ -5,7 +5,7 @@ def check_complexity(data: ASTData, cfg: dict):
     """
     Compute McCabe cyclomatic complexity per function.
     """
-    max_complexity = cfg.get("max_complexity", 10)
+    max_complexity = cfg.get("max_complexity", 20)
     issues = []
     
     for fn in data.functions:
@@ -22,6 +22,6 @@ def check_complexity(data: ASTData, cfg: dict):
         if complexity > max_complexity:
             issues.append((
                 fn.lineno,
-                f"Function '{fn.name}' has high cyclomatic complexity ({complexity}) - consider refactoring"
+                f"Function '{fn.name}' has high cyclomatic complexity ({complexity}), exceeds limit of {max_complexity}."
             ))
     return issues
