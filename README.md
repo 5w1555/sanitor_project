@@ -1,7 +1,7 @@
 
 # Sanitor
 
-Sanitor is a static analyzer for Python codebases. Not a linter, not a style cop — just a tool that stares at your AST and says: "Why is this like that?"
+Sanitor is a static analyzer for Python codebases. Not a linter, not a style cop — just a tool that stares at your code and returns any structural issues.
 
 It focuses on using AST, giving you a report in seconds of the most pressing strctural issues in your codebase.
 
