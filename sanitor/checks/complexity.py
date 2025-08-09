@@ -22,6 +22,6 @@ def check_complexity(data: ASTData, cfg: dict):
         if complexity > max_complexity:
             issues.append((
                 fn.lineno,
-                f"Function '{fn.name}' has high cyclomatic complexity ({complexity}), exceeds limit of {max_complexity}."
+                f"Function '{fn.name}' has high cyclomatic complexity ({complexity}) - (curr_max_complexity) {max_complexity}."
             ))
     return issues
