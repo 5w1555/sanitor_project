@@ -1,9 +1,8 @@
-
 # Sanitor
 
 Sanitor is a static analyzer for Python codebases. Not a linter, not a style cop — just a tool that stares at your code and returns any structural issues.
 
-It focuses on using AST, giving you a report in seconds of the most pressing strctural issues in your codebase.
+It focuses on using AST, giving you a report in seconds of the most pressing structural issues in your codebase.
 
 ---
 
@@ -18,11 +17,10 @@ It focuses on using AST, giving you a report in seconds of the most pressing str
 
 ---
 
-
 ## Requirements
 
-- Python 3.7+
-- click
+* Python 3.7+
+* click
 
 Install requirements:
 
@@ -33,13 +31,12 @@ pip install -r requirements.txt
 ## Installation
 
 ```bash
-git clone https://github.com/TechBooper/sanitor.git
-cd sanitor
+git clone https://github.com/5w1555/sanitor_project.git
+cd sanitor_project
 pip install .
 ```
 
 ---
-
 
 ## How To Run It
 
@@ -47,7 +44,7 @@ pip install .
 python sanitor_cli.py path/to/codebase
 ```
 
-or, if you installed it as cli locally:
+or, if you installed it as CLI locally:
 
 ```bash
 sanitor path/to/codebase
@@ -63,8 +60,8 @@ python sanitor_cli.py . --config sanitor_config.json --json-output
 
 ## Output Example
 
-```
-📁 tests_cycles\trigger_sanitor.py
+```text
+📁 tests_cycles/trigger_sanitor.py
   [m] Line 1: Overused word 'handle' in 4 functions – be more specific
   [m] Line 1: Overused word 'process' in 4 functions – be more specific
   [m] Line 9: Magic number 42 appears 4× – consider a named constant
@@ -76,11 +73,9 @@ python sanitor_cli.py . --config sanitor_config.json --json-output
   [m] Line 96: Large class 'BigClass' has 14 public methods - consider splitting
 ```
 
-
 Output format: human-readable or `--json-output` for CI use.
 
 ---
-
 
 ## Config File (Optional)
 
@@ -95,7 +90,6 @@ Sanitor will use the config file you specify with `--config`. The file should be
 ```
 
 ---
-
 
 ## Add Your Own Checks
 
@@ -114,22 +108,21 @@ It’ll be picked up automatically.
 
 * CI/CD workflow implementation
 * More built-in checks
-* demo?
+* Demo
 * Easier to tune checks depending on your need
-* Optimizing checks (tested only on low scale, 5000+ lines python codebases)
+* Optimizing checks (tested only on low scale, 5000+ lines Python codebases)
 * Multi-language implementation
-
-
-## Why This Exists
-
-Sanitor was built as I had many fundamental design issues in my own code. I needed a tool to tell me just that and fast.
-
-It's as of now still a work in progress.
 
 ---
 
+## Why This Exists
 
+Sanitor was built because I had many fundamental design issues in my own code. I needed a tool to tell me just that — and fast.
+
+It's still a work in progress.
+
+---
 
 ## License
 
-MIT.
+MIT
